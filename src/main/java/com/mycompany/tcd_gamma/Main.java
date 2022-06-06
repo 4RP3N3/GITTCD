@@ -15,6 +15,8 @@ public class Main {
     
     public static void main(String[] args) {
         
+        //teste do branch
+        
 //<editor-fold defaultstate="collapsed" desc="Definição de 5 Pessoas">
         Pessoa p1 = new Pessoa();
         Pessoa p2 = new Pessoa();
