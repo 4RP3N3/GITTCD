@@ -8,13 +8,14 @@ package TCD_CLASSES;
  *
  * @author Artur
  */
-public class Pessoa {
+public class Pessoa extends Entidade {
     
     //<editor-fold defaultstate="collapsed" desc="Atributos">
     
     private String nome;
-    private Long cpf;
     private String email;
+    private Boolean ativo;
+    private Boolean lixo;
     
     
     
@@ -27,14 +28,14 @@ public class Pessoa {
     public Pessoa() {
     }
 
-    public Pessoa(String nome, Long cpf, String email) {
+    public Pessoa(String nome, String email, Boolean ativo, Boolean lixo) {
         this.nome = nome;
-        
-        //TODO implementar o teste de CPF
-        
-        this.cpf = cpf;
         this.email = email;
+        this.ativo = ativo;
+        this.lixo = lixo;
     }
+
+ 
 
     
     
@@ -52,14 +53,6 @@ public class Pessoa {
         this.nome = nome;
     }
 
-    public Long getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(Long cpf) {
-        this.cpf = cpf;
-    }
-
     public String getEmail() {
         return email;
     }
@@ -67,6 +60,23 @@ public class Pessoa {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public Boolean getAtivo() {
+        return ativo;
+    }
+
+    public void setAtivo(Boolean ativo) {
+        this.ativo = ativo;
+    }
+
+    public Boolean getLixo() {
+        return lixo;
+    }
+
+    public void setLixo(Boolean lixo) {
+        this.lixo = lixo;
+    }
+    
     
     
     
@@ -78,8 +88,8 @@ public class Pessoa {
         @Override
     public String toString() {
         return ("Nome: " +nome+"\n"
-                + "CPF: "+cpf+"\n"
-                + "Email: "+email+"\n");
+                + "Email: "+email+"\n"
+                + "Status: "+ativo+"\n");
     }
     
 //</editor-fold>

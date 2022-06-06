@@ -12,7 +12,7 @@ import java.time.LocalDate;
  *
  * @author User
  */
-public class Pagamento {
+public class Pagamento extends Entidade{
 
 //<editor-fold defaultstate="collapsed" desc="Atributos">
     private BigDecimal valor;

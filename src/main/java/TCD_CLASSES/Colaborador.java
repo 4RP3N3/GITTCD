@@ -1,6 +1,7 @@
 
 package TCD_CLASSES;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 
 /**
@@ -11,8 +12,9 @@ public class Colaborador extends Pessoa{
     
     //<editor-fold defaultstate="collapsed" desc="Atributos">
     
-        private TipoTrabalho funcaoNoEnsaio;
-        private ArrayList<Contrato> historicoDeEventos = new ArrayList<Contrato>();
+        private String funcaoNoEnsaio;
+        private BigDecimal remuneracao;
+
     
 //</editor-fold>
     
@@ -25,16 +27,16 @@ public class Colaborador extends Pessoa{
         public Colaborador(Pessoa p1) {
         super.setNome(p1.getNome());
         super.setEmail(p1.getEmail());
-        super.setCpf(p1.getCpf());
+
 
     }
         
         
-        public Colaborador(Pessoa p1, TipoTrabalho funcaoNoEnsaio) {
+        public Colaborador(Pessoa p1, String funcaoNoEnsaio, BigDecimal remuneracao) {
         super.setNome(p1.getNome());
         super.setEmail(p1.getEmail());
-        super.setCpf(p1.getCpf());
         this.funcaoNoEnsaio = funcaoNoEnsaio;
+        this.remuneracao= remuneracao;
     }
         
         
@@ -43,43 +45,36 @@ public class Colaborador extends Pessoa{
         
     //<editor-fold defaultstate="collapsed" desc="Getters e Setters">
         
-          public TipoTrabalho getFuncaoNoEnsaio() {
+          public String getFuncaoNoEnsaio() {
         return funcaoNoEnsaio;
     }
 
-    public void setFuncaoNoEnsaio(TipoTrabalho funcaoNoEnsaio) {
+    public void setFuncaoNoEnsaio(String funcaoNoEnsaio) {
         this.funcaoNoEnsaio = funcaoNoEnsaio;
     }
+
+    public BigDecimal getRemuneracao() {
+        return remuneracao;
+    }
+
+    public void setRemuneracao(BigDecimal remuneracao) {
+        this.remuneracao = remuneracao;
+    }
+    
+    
+    
+    
         
 //</editor-fold>
 
-     //<editor-fold defaultstate="collapsed" desc="Metodos do Arraylist de Equipes">
-    
-    void addEquipeNoHistorico(Contrato evt) {  //adiciona uma equipe ao histórico do colaborador
-        historicoDeEventos.add(evt);
-    }
-    
-    void removeEquipeDoHistorico(Contrato evt){
-        historicoDeEventos.remove(evt);
-    }
-    
-    int numeroDeEventos(){
-        return historicoDeEventos.size();
-    }
-    
-    
-    
-    
-//</editor-fold>
-    
-    
     
     //<editor-fold defaultstate="collapsed" desc="To_string">
         @Override
     public String toString() {
         return ("Nome do Colaborador: "+super.getNome()+"\n"
                 + "Email do colaborador: "+super.getEmail()+"\n"
-                + "Função no ensaio: "+ funcaoNoEnsaio+"\n");
+                + "Função no ensaio: "+ funcaoNoEnsaio+"\n"
+                + "REmuneração: "+ remuneracao+"\n");
     }
 //</editor-fold>
     

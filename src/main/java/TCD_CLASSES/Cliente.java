@@ -20,7 +20,6 @@ public class Cliente extends Pessoa {
 
         super.setNome(p1.getNome());
         super.setEmail(p1.getEmail());
-        super.setCpf(p1.getCpf());
 
     }
 
@@ -48,7 +47,6 @@ public class Cliente extends Pessoa {
     @Override
     public String toString() {
         return ("Nome do cliente: " + super.getNome() + "\n"
-                + "CPF: " + super.getCpf() + "\n"
                 + "Email: " + super.getEmail() + "\n"
                 + "Numero de Cotratos: " + this.numeroDeContratos()+"\n");
     }

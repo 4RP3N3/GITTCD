@@ -11,7 +11,7 @@ import java.time.Duration;
  *
  * @author Artur
  */
-public class TipoProduto {
+public class TipoProduto extends Entidade{
 
     //<editor-fold defaultstate="collapsed" desc="Atributos">
     private Integer index; // identificador do produto

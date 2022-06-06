@@ -10,7 +10,7 @@ import java.util.Iterator;
  *
  * @author User
  */
-public class Contrato {
+public class Contrato extends Entidade{
     
 //<editor-fold defaultstate="collapsed" desc="Atributos">
     

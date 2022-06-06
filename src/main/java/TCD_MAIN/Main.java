@@ -4,12 +4,13 @@
  */
 package TCD_MAIN;
 
+import TCD_BD.ColaboradorDao;
 import TCD_CLASSES.Cliente;
 import TCD_CLASSES.TipoProduto;
 import TCD_CLASSES.Contrato;
 import TCD_CLASSES.Colaborador;
 import TCD_CLASSES.Pessoa;
-import TCD_CLASSES.TipoTrabalho;
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.time.Month;
 
@@ -31,23 +32,18 @@ public class Main {
         Pessoa p5 = new Pessoa();
 
         p1.setNome("Ana");
-        p1.setCpf(112233L);
         p1.setEmail("ana@mail.com");
 
         p2.setNome("Carla");
-        p2.setCpf(223344L);
         p2.setEmail("carla@mail.com");
 
         p3.setNome("Pedro");
-        p3.setCpf(334455L);
         p3.setEmail("pedro@mail.com");
 
         p4.setNome("Mario");
-        p4.setCpf(445566L);
         p4.setEmail("mario@mail.com");
 
         p5.setNome("João");
-        p5.setCpf(556677L);
         p5.setEmail("João@mail.com");
 
         System.out.println("========Definição de 5 Pessoas========");
@@ -58,21 +54,21 @@ public class Main {
         System.out.println(p5);
 
 //</editor-fold>
-//<editor-fold defaultstate="collapsed" desc="Definição dos tês tipos de trabalho">
-        TipoTrabalho papelDePrimFotografo = new TipoTrabalho(1);
-        TipoTrabalho papelDeSegFotografo = new TipoTrabalho(2);
-        TipoTrabalho papelDeAssitente = new TipoTrabalho(3);
 
-        System.out.println("========Definição de 3 tipos de trabalho========");
-        System.out.println(papelDePrimFotografo);
-        System.out.println(papelDeSegFotografo);
-        System.out.println(papelDeAssitente);
-
-//</editor-fold>
 //<editor-fold defaultstate="collapsed" desc="Definição de 3 colaboradores">
         Colaborador clb1 = new Colaborador(p3);
         Colaborador clb2 = new Colaborador(p4);
         Colaborador clb3 = new Colaborador(p5);
+        
+        clb1.setFuncaoNoEnsaio("Primeiro Fotografo");
+        clb1.setRemuneracao(new BigDecimal("1000"));
+
+        clb1.setFuncaoNoEnsaio("Segundo Fotografo");
+        clb1.setRemuneracao(new BigDecimal("600"));
+
+        clb1.setFuncaoNoEnsaio("Assistente");
+        clb1.setRemuneracao(new BigDecimal("400"));
+        
 
         System.out.println("========Definição de 3 Colaboradores========");
         System.out.println(clb1);
@@ -121,6 +117,9 @@ System.out.println("========Definição de Contratos========");
         System.out.println(contrato1);
 
 //</editor-fold>
+
+
+new ColaboradorDao().salvar(clb1);
 
 
     }
