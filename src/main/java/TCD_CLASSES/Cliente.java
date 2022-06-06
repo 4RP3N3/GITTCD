@@ -1,4 +1,4 @@
-package com.mycompany.tcd_gamma;
+package TCD_CLASSES;
 
 import java.util.ArrayList;
 

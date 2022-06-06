@@ -2,8 +2,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.tcd_gamma;
+package TCD_MAIN;
 
+import TCD_CLASSES.Cliente;
+import TCD_CLASSES.TipoProduto;
+import TCD_CLASSES.Contrato;
+import TCD_CLASSES.Colaborador;
+import TCD_CLASSES.Pessoa;
+import TCD_CLASSES.TipoTrabalho;
 import java.time.LocalDateTime;
 import java.time.Month;
 
@@ -15,7 +21,7 @@ public class Main {
     
     public static void main(String[] args) {
         
-        //teste do branch
+   
         
 //<editor-fold defaultstate="collapsed" desc="Definição de 5 Pessoas">
         Pessoa p1 = new Pessoa();

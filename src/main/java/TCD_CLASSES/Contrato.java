@@ -1,5 +1,5 @@
 
-package com.mycompany.tcd_gamma;
+package TCD_CLASSES;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
